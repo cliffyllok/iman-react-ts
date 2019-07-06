@@ -24,10 +24,10 @@ steps:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/Reactapp_$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Reactapp.zip'
     replaceExistingArchive: true
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/Reactapp_$(Build.BuildId).zip'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/Reactapp.zip'
     ArtifactName: 'adddrop'
     publishLocation: 'Container'
